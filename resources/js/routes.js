@@ -4,18 +4,18 @@ import EditAuthor from './components/EditAuthor';
 
 export const routes = [
     {
-        name: 'home',
-        path: '/',
+        name: 'authors',
+        path: '/authors',
         component: AllAuthor
     },
     {
         name: 'create',
-        path: '/create',
+        path: '/authors/create',
         component: CreateAuthor
     },
     {
         name: 'edit',
-        path: '/edit/:id',
+        path: '/autgors/edit/:id',
         component: EditAuthor
     }
 ];

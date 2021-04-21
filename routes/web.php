@@ -1,6 +1,8 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +16,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', function () {
-//    return view('welcome');
+//    return Inertia::render('Welcome', [
+//        'canLogin' => Route::has('login'),
+//        'canRegister' => Route::has('register'),
+//        'laravelVersion' => Application::VERSION,
+//        'phpVersion' => PHP_VERSION,
+//    ]);
 //});
 
-Route::get('{any}', function () {
-    return view('app');
-})->where('any', '.*');
+Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
+    return Inertia::render('Dashboard');
+})->name('dashboard');
+
+Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
+    Route::group(['middleware' => ['auth', 'verified']], function () {
+        // User & Profile...
+        Route::get('/author/list', function () {
+            return Inertia::render('Author/List');
+        })
+            ->name('author.list');
+
+        Route::get('/author/create', function () {
+            return Inertia::render('Author/Create');
+        })
+            ->name('author.create');
+
+
+        Route::get('/author/edit', function () {
+            return Inertia::render('Author/Edit');
+        })
+            ->name('author.edit');
+    });
+});
+

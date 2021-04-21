@@ -1,34 +1,21 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
-window.Vue = require('vue/dist/vue');
 
-import App from './App';
-import VueAxios from 'vue-axios';
-import VueRouter from 'vue-router';
-import axios from 'axios';
-import { routes } from './routes';
+// Import modules...
+import { createApp, h } from 'vue';
+import { App as InertiaApp, plugin as InertiaPlugin } from '@inertiajs/inertia-vue3';
+import { InertiaProgress } from '@inertiajs/progress';
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+const el = document.getElementById('app');
 
-Vue.use(VueRouter);
-Vue.use(VueAxios, axios);
+createApp({
+    render: () =>
+        h(InertiaApp, {
+            initialPage: JSON.parse(el.dataset.page),
+            resolveComponent: (name) => require(`./Pages/${name}`).default,
+        }),
+})
+    .mixin({ methods: { route } })
+    .use(InertiaPlugin)
+    .mount(el);
 
-const router = new VueRouter({
-    mode: 'history',
-    routes: routes
-});
-
-const app = new Vue({
-    el: '#app',
-    router: router,
-    render: h => h(App),
-});
+InertiaProgress.init({ color: '#4B5563' });
