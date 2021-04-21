@@ -1,11 +1,13 @@
 # Authors CRUD API based on Laravel and VUE
+Book author management application
+## Demo
+The demo application is located at this address : [https://books-app.execut.co](https://books-app.execut.co)
 ## Features
 - [x] Authors CRUD API tests
 - [x] Authors CRUD API
 - [x] Authors CRUD VUE frontend
 - [x] Traefik support
 - [x] Letsencrypt ssl-certificates
-- [x] Demo site [https://books-app.execut.co](https://books-app.execut.co)
 - [x] Authentication
 
 
