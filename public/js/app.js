@@ -24236,7 +24236,7 @@ var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
   "class": "ml-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "mt-2 text-gray-600 dark:text-gray-400 text-sm"
-}, " Please follow the link you need at the top right ")])])])], -1
+}, " Please, follow the link you need at the top right ")])])])], -1
 /* HOISTED */
 );
 

@@ -15,6 +15,17 @@
 
         <!-- Scripts -->
         @routes
+        <script type="text/javascript">
+            /**
+             * @TODO fix for https://github.com/tighten/ziggy/issues/387
+             */
+            if (Ziggy.url === 'http://books-app.test') {
+                Ziggy.url = 'https://books-app.test';
+            }
+            if (Ziggy.url === 'https://books-app.execut.co') {
+                Ziggy.url = 'https://books-app.execut.co';
+            }
+        </script>
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
