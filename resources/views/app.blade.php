@@ -22,7 +22,7 @@
             if (Ziggy.url === 'http://books-app.test') {
                 Ziggy.url = 'https://books-app.test';
             }
-            if (Ziggy.url === 'https://books-app.execut.co') {
+            if (Ziggy.url === 'http://books-app.execut.co') {
                 Ziggy.url = 'https://books-app.execut.co';
             }
         </script>
