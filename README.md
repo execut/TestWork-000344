@@ -3,7 +3,7 @@
 - [x] Authors CRUD API tests
 - [x] Authors CRUD API
 - [x] Authors CRUD VUE frontend
-- [x] Traefik support
+- [x] Traefik support with letsencrypt ssl-certificates
 - [x] Demo site [https://books-app.execut.co](https://books-app.execut.co)
 - [ ] Authentication
 - [ ] Books CRUD API tests
