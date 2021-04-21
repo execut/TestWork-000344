@@ -154,6 +154,9 @@
                         <jet-responsive-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                             Dashboard
                         </jet-responsive-nav-link>
+                        <jet-responsive-nav-link :href="route('author.list')" :active="route().current('author.list')">
+                            Authors CRUD
+                        </jet-responsive-nav-link>
                     </div>
 
                     <!-- Responsive Settings Options -->
