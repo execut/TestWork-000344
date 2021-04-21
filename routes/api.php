@@ -18,6 +18,11 @@ use App\Http\Controllers\AuthorController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::middleware('api')->group(function () {
+
+Route::group([
+    'middleware' => ['api'],
+], function () {
     Route::resource('authors', AuthorController::class);
 });
+
+//Route::get('/authors', [AuthorController::class, 'show'])->middleware('auth:sanctum');
