@@ -5,8 +5,8 @@
                 Authors List
             </h2>
         </template>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light show">
+            <div class="collapse navbar-collapse show">
                 <div class="navbar-nav">
                     <jet-nav-link :href="route('author.list')" :active="route().current('author.list')">
                         List

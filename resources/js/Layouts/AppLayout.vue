@@ -102,6 +102,14 @@
                                     </template>
 
                                     <template #content>
+                                        <div class="block px-4 py-2 text-xs text-gray-400">
+                                            Administration
+                                        </div>
+
+                                        <jet-dropdown-link :href="route('author.list')" :active="route().current('author.list')">
+                                            Authors CRUD
+                                        </jet-dropdown-link>
+
                                         <!-- Account Management -->
                                         <div class="block px-4 py-2 text-xs text-gray-400">
                                             Manage Account
