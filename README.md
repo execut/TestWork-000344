@@ -4,16 +4,20 @@
 - [x] Authors CRUD API
 - [x] Authors CRUD VUE frontend
 - [x] Traefik support
-- [ ] Demo site [https://books-app.execut.co](https://books-app.execut.co)
+- [x] Demo site [https://books-app.execut.co](https://books-app.execut.co)
+- [ ] Authentication
 - [ ] Books CRUD API tests
 - [ ] Books CRUD API
 - [ ] Books CRUD VUE frontend
 
 
 ## Usage
-1. `git clone https://github.com/execut/TestWork-000344.git authors-crud`
-1. `cd authors-crud`
-1. Setup your `.env` file
+1. `git clone https://github.com/execut/TestWork-000344.git books-app`
+1. `cd books-app`
+1. `composer install`
+1. Create a copy of your .env file: `cp .env.example .env` and setup normal passwords inside
+1. Generate your encryption key: `php artisan key:generate`
+1. Migrate DB: `php artisan migrate`
 1. Run application
     * For development environment: `./vendor/bin/sail -f docker-compose.yml -f docker-compose.dev.yml up`
     * For production with traefik, simple run: `./vendor/bin/sail up`
