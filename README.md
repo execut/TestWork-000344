@@ -35,4 +35,4 @@ For tests, just run the command:
 ./vendor/bin/sail test
 ```
 Results: 
-![Tests results](https://raw.githubusercontent.com/execut/TestWork-000344/master/docs/tests-results.jpg)
+![Tests results](https://raw.githubusercontent.com/execut/books-app/master/docs/tests-results.jpg)
