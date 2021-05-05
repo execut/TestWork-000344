@@ -12,7 +12,7 @@ The demo application is located at this address : [https://books-app.execut.co](
 
 
 ## Usage
-1. `git clone https://github.com/execut/TestWork-000344.git books-app`
+1. `git clone https://github.com/execut/books-app.git books-app`
 1. `cd books-app`
 1. `composer install`
 1. Create a copy of your .env file: `cp .env.example .env` and setup normal passwords inside
