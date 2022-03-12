@@ -2,8 +2,11 @@
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
         <div v-if="canLogin" class="fixed top-0 right-0 px-6 py-4">
             <inertia-link v-if="$page.props.user" href="/dashboard" class="text-sm text-gray-700 underline">
-                Dashboard
+                Dashboard - VUE.js
             </inertia-link>
+            <a v-if="$page.props.user" href="/authors" class="text-sm text-gray-700 underline px-10">
+                Dashboard - native
+            </a>
 
             <template v-else>
                 <inertia-link :href="route('login')" class="text-sm text-gray-700 underline">

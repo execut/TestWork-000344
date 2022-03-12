@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\AuthorNativeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::group(['middleware' => config('jetstream.middleware', ['web'])], function () {
     Route::group(['middleware' => ['auth', 'verified']], function () {
-        // User & Profile...
+        Route::resource('authors', AuthorNativeController::class);
+
+        // Author...
         Route::get('/author/list', function () {
             return Inertia::render('Author/List');
         })
